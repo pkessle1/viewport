@@ -1,6 +1,48 @@
 /* YOUR NAME GOES HERE */
-
+Kess Kessler
 /* --------------- ADD CSS RESET TO THE FILE HERE --------------- */
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+    margin:0;
+    padding:0;
+}
+html,body {
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,img { 
+    border:0;
+}
+input{
+    border:1px solid #b0b0b0;
+    padding:3px 5px 4px;
+    color:#979797;
+    width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border:0;
+}
+
 
 
 
@@ -31,10 +73,17 @@
 
 /* ----- CHECK FOR USER DARK MODE PREFERENCE ----- */
 /* --------------- BEGIN USER PREFERS DARK COLOR SCHEME QUERY --------------- */
-
+@media (prefers-color-scheme: dark){
 /* CHANGE THE BODY'S BACKGROUND COLOR TO THE DARK GRAY IF THE USER PREFERS DARK MODE */
-
+body{
+    background-color: var(--dark-gray);
+    color:white;
+}
 /* --------------- END USER PREFERS DARK COLOR SCHEME QUERY --------------- */
+}
+
+
+
 
 
 
@@ -150,7 +199,8 @@ img{
 
 /* ---------- SMALL SCREEN STYLES ---------- */
 /* --------------- BEGIN SMALL SCREEN SIZES --------------- */
-    /* header, footer{
+@media screen and(max-width:599px){
+    * header, footer{
         background-color: var(--lime-green);
         color: var(--dark-gray);
     }
@@ -175,14 +225,17 @@ img{
     img{
         width: 200px;
         max-width: 200px;
-    } */
+    } 
+}
 /* --------------- END SMALL SCREEN SIZES --------------- */
+
 
 
 
 /* ---------- MEDIUM SCREEN STYLES ---------- */
 /* --------------- BEGIN MEDIUM SCREEN SIZES --------------- */
-    /* header, footer{
+@media screen and(min-width:600px) and (max-width:1023px){
+    * header, footer{
         background-color: var(--black);
         color: var(--white);
     }   
@@ -207,14 +260,17 @@ img{
     #seven{
         grid-column: 3/4;
         grid-row: 3/5;
-    } */
+    } 
+}
 /* --------------- END MEDIUM SCREEN SIZES --------------- */
+
 
 
 
 /* ---------- LARGE SCREEN STYLES ---------- */
 /* --------------- BEGIN LARGE SCREEN SIZES --------------- */
-    /* header, footer{
+@media screen and(min-width:1024px) and (max-width:1439px){
+    * header, footer{
         background-color: var(--lime-green);
         color: var(--dark-gray);
     }
@@ -245,24 +301,28 @@ img{
 
     #seven, #eight{
         grid-row: 3/4;
-    } */
+    } 
+}
 /* --------------- END LARGE SCREEN SIZES --------------- */
 
 
 
 /* ---------- ADJUSTING RESPONSIVE IMAGE SIZE ---------- */
 /* --------------- BEGIN RESPONSIVE IMAGE ADJUST SIZES --------------- */
-    /* img{
+    @media(max-width:600px){
+        img{
         width: 300px;
         max-width: 300px;
-    } */
+        } 
+    }
 /* --------------- END RESPONSIVE IMAGE ADJUST SIZES --------------- */
 
 
 
 /* ---------- EXTRA LARGE SCREEN STYLES ---------- */
 /* --------------- BEGIN EXTRA LARGE SCREEN SIZES --------------- */
-    /* header, footer{
+@media screen and (min-width:1440px){
+     header, footer{
         background-color: var(--orange);
         padding-left: 5%;
     }
@@ -327,5 +387,6 @@ img{
 
     #three p, #four p, #five p, #six p{
         padding-top: 2em;
-    } */
+    } 
+}
 /* --------------- END EXTRA LARGE SCREEN SIZES --------------- */
